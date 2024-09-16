@@ -23,7 +23,7 @@ export default {
     <header>
         <div class="header-flex">
             <div class="img-header">
-                <img src="../assets/img (5)/img/dc-logo.png" alt="logo DC">
+                <img src="../assets/img/img/dc-logo.png" alt="logo DC">
             </div>
             <div class="navbar-header">
                 <ul class="navbar-header-flex d-flex">

@@ -15,30 +15,46 @@ export default {
 
 <template>
     <footer>
-        <ul>
-            <h5>DC COMICS</h5>
-            <li v-for="element in dcLists.dcComics">{{element}}</li>
-            <h5 class="mt-3">SHOP</h5>
-            <li v-for="element in dcLists.shop">{{ element }}</li>
-        </ul>
-        <ul>
-            <h5>DC</h5>
-            <li v-for="element in dcLists.dc">{{element}}</li>
-        </ul>
-        <ul>
-            <h5>SITES</h5>
-            <li v-for="element in dcLists.sites">{{element}}</li>
-        </ul>
+        <div class="container list-footer">
+            <ul>
+                <h5>DC COMICS</h5>
+                <li v-for="element in dcLists.dcComics">{{element}}</li>
+                <h5 class="mt-3">SHOP</h5>
+                <li v-for="element in dcLists.shop">{{ element }}</li>
+            </ul>
+            <ul>
+                <h5>DC</h5>
+                <li v-for="element in dcLists.dc">{{element}}</li>
+            </ul>
+            <ul>
+                <h5>SITES</h5>
+                <li v-for="element in dcLists.sites">{{element}}</li>
+            </ul>
+        </div>
     </footer>
 </template>
 
 <style scoped>
     footer {
+        background-image: url(../../assets/img/img/footer-bg.jpg);
+        padding: 30px;
+    }
+
+    .list-footer {
         display: flex;
     }
 
     ul {
         display: flex;
         flex-direction: column;
+        color: white;
+        
+        li {
+            opacity: 0.5;
+        }
+    }
+
+    h5 {
+        color: white;
     }
 </style>
