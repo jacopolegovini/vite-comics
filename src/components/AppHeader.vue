@@ -51,6 +51,8 @@ export default {
         .navbar-header-flex {
             gap: 15px;
             text-align: center;
+            font-weight: bold;
+            color: gray;
         }
     }
 
