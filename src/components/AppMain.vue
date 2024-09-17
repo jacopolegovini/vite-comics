@@ -1,4 +1,7 @@
 <script>
+import CardMain from './main/CardMain.vue';
+import TopMain from './main/TopMain.vue';
+
 export default {
     data() {
         return {
@@ -77,14 +80,21 @@ export default {
                 }
             ]
         }
-    }
+    },
+    components: {
+            CardMain, 
+            TopMain
+        }
 }
 </script>
 
 <template>
     <main>
         <div class="container">
-            <p>--> Content goes here <--</p>
+            <TopMain/>
+            <CardMain v-for="comic in comics"
+                :comic="comic"
+                />
         </div>
     </main>
 </template>
@@ -92,7 +102,6 @@ export default {
 <style scoped>
     main {
         background-color: black;
-        height: 100px;
     }
 
     p {
