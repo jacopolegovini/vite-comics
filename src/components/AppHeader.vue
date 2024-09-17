@@ -14,6 +14,15 @@ export default {
                 'Fans',
                 'News',
                 'Shop'
+            ],
+            sandwichMenus: [
+                'lorem ipsum',
+                'lorem ipsum',
+                'lorem ipsum',
+                'lorem ipsum',
+                'lorem ipsum',
+                'lorem ipsum',
+                'lorem ipsum',
             ]            
         }
     },
@@ -39,6 +48,13 @@ export default {
                         <div :class="currentIndex === index ? 'highlight-navbar' : ''">{{ list }}</div>
                     </li>
                 </ul>
+            </div>
+        </div>
+        <div class="sandwich-menu" v-if="currentIndex !== null">
+            <div>
+                <div class="container" v-for="(list, index) in sandwichMenus" :key="index">
+                    {{ list }}
+                </div>
             </div>
         </div>
     </header>
@@ -88,6 +104,7 @@ export default {
             height: 100%;
             text-transform: uppercase;
             line-height: 150px;
+            cursor: pointer;
         }
 
     }
@@ -97,5 +114,12 @@ export default {
         color: #0282F9;
     } */
 
+    .sandwich-menu {
+        position: relative;
+        z-index: 1;
+        color: black;
+        background-color: white;
+        height: 270px;
+    }
 
 </style>
