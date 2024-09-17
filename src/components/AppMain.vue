@@ -1,5 +1,6 @@
 <script>
 import CardMain from './main/CardMain.vue';
+import CtaMain from './main/CtaMain.vue';
 import TopMain from './main/TopMain.vue';
 
 export default {
@@ -83,7 +84,8 @@ export default {
     },
     components: {
             CardMain, 
-            TopMain
+            TopMain,
+            CtaMain
         }
 }
 </script>
@@ -98,6 +100,7 @@ export default {
                     />
             </div>
         </div>
+        <CtaMain/>
     </main>
 </template>
 
@@ -108,7 +111,7 @@ export default {
     }
 
     .main-container {
-        height: 100%;
+        margin-bottom: 60px;
     }
 
     p {

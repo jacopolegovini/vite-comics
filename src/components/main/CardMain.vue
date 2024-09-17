@@ -60,6 +60,11 @@ export default {
 
     .card-img {
         height: 200px;
+
+    }
+
+    .card-img:hover {
+        opacity: 0.5;
     }
 
     img {
@@ -71,5 +76,15 @@ export default {
         height: 100%;
         object-fit: cover;
         object-position: 0 0;
+    }
+
+    .cta-load-more {
+        text-transform: uppercase;
+        background-color: #0282F9;
+        color: white;
+        padding: 5px 8px;
+        display: inline;
+        text-align: center;
+        font-weight: 500;
     }
 </style>
