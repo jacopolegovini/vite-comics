@@ -92,16 +92,18 @@ export default {
     <main>
         <div class="container">
             <TopMain/>
-            <CardMain v-for="comic in comics"
-                :comic="comic"
-                />
+            <div class="comic-cards">
+                <CardMain v-for="comic in comics"
+                    :comic="comic"
+                    />
+            </div>
         </div>
     </main>
 </template>
 
 <style scoped>
     main {
-        background-color: black;
+        background-color: #1C1C1C;
     }
 
     p {
@@ -112,5 +114,9 @@ export default {
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    .comic-cards {
+        display: flex;
     }
 </style>
