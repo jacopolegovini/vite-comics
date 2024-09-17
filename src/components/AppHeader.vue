@@ -2,6 +2,7 @@
 export default {
     data() {
         return {
+            flag: false,
             currentIndex: null,
             menu: [
                 'Characters',
@@ -28,9 +29,11 @@ export default {
     },
     methods: {
             changeValueNavbar(index) {
-                console.log('test')
-                console.log(index)
                 return this.currentIndex = index;
+            },
+            
+            disappearMenu(){
+                return this.currentIndex = null;
             }
         }
 }
@@ -50,9 +53,9 @@ export default {
                 </ul>
             </div>
         </div>
-        <div class="sandwich-menu" v-if="currentIndex !== null">
+        <div class="sandwich-menu" v-if="currentIndex !== null" :class="currentIndex">
             <div>
-                <div class="container" v-for="(list, index) in sandwichMenus" :key="index">
+                <div class="container" v-for="(list, index) in sandwichMenus" :key="index" @click="disappearMenu">
                     {{ list }}
                 </div>
             </div>
