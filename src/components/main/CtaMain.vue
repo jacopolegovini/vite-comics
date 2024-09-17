@@ -14,6 +14,7 @@ export default {
             <button>load more</button>
         </div>
     </div>
+    
 </template>
 
 <style scoped>
