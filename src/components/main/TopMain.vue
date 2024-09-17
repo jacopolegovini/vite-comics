@@ -9,9 +9,9 @@ export default {
 </script>
 
 <template>
-    <main>
+    <div>
         <p>test</p>
-    </main>
+    </div>
 </template>
 
 <style scoped>

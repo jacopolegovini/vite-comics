@@ -90,7 +90,7 @@ export default {
 
 <template>
     <main>
-        <div class="container">
+        <div class="container main-container">
             <TopMain/>
             <div class="comic-cards">
                 <CardMain v-for="comic in comics"
@@ -104,6 +104,11 @@ export default {
 <style scoped>
     main {
         background-color: #1C1C1C;
+        height: 800px;
+    }
+
+    .main-container {
+        height: 100%;
     }
 
     p {
@@ -122,5 +127,7 @@ export default {
         justify-content: space-around;
         flex-wrap: wrap;
         padding: 20px 0;
+        align-content: space-around;
+        height: 70%;
     }
 </style>
