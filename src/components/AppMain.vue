@@ -95,8 +95,8 @@ export default {
         <TopMain/>
         <div class="container main-container">
             <div class="comic-cards">
-                <CardMain v-for="comic in comics"
-                    :comic="comic"
+                <CardMain v-for="(comic, index) in comics"
+                    :comic="comic" :key="index"
                     />
             </div>
         </div>
