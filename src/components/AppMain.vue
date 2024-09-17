@@ -90,8 +90,8 @@ export default {
 
 <template>
     <main>
+        <TopMain/>
         <div class="container main-container">
-            <TopMain/>
             <div class="comic-cards">
                 <CardMain v-for="comic in comics"
                     :comic="comic"
@@ -104,7 +104,7 @@ export default {
 <style scoped>
     main {
         background-color: #1C1C1C;
-        height: 800px;
+        height: 900px;
     }
 
     .main-container {
@@ -128,6 +128,6 @@ export default {
         flex-wrap: wrap;
         padding: 20px 0;
         align-content: space-around;
-        height: 70%;
+        height: 60%;
     }
 </style>

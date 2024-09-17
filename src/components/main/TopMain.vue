@@ -9,11 +9,14 @@ export default {
 </script>
 
 <template>
-    <div>
-        <p>test</p>
+    <div class="top-main-img">
+
     </div>
 </template>
 
 <style scoped>
-
+    .top-main-img {
+        background-image: url(../../assets/img/img/jumbotron.jpg);
+        height: 30%;
+    }
 </style>
