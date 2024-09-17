@@ -11,7 +11,7 @@ export default {
 <template>
     <div class="container load-more-container">
         <div class="load-more">
-            load more
+            <button>load more</button>
         </div>
     </div>
 </template>
@@ -23,12 +23,17 @@ export default {
 }
 
 .load-more {
-    text-transform: uppercase;
     background-color: #0282F9;
-    color: white;
     padding: 5px 70px;
     display: inline;
     text-align: center;
+}
+
+button {
+    background-color: transparent;
+    border: 0;
+    text-transform: uppercase;
+    color: white;
     font-weight: 500;
     font-size: 0.8rem;
 }
