@@ -2,6 +2,7 @@
 export default {
     data() {
         return {
+            currentIndex: null,
             menu: [
                 'Characters',
                 'Comics',
@@ -13,9 +14,16 @@ export default {
                 'Fans',
                 'News',
                 'Shop'
-            ]
+            ]            
         }
-    }
+    },
+    methods: {
+            changeValueNavbar(index) {
+                console.log('test')
+                console.log(index)
+                return this.currentIndex = index;
+            }
+        }
 }
 </script>
 
@@ -27,8 +35,8 @@ export default {
             </div>
             <div class="navbar-header">
                 <ul class="navbar-header-flex">
-                    <li v-for="list in menu">
-                        {{ list }}
+                    <li v-for="(list, index) in menu" :key="index" @click="changeValueNavbar(index)">
+                        <div :class="currentIndex === index ? 'highlight-navbar' : ''">{{ list }}</div>
                     </li>
                 </ul>
             </div>
@@ -37,6 +45,12 @@ export default {
 </template>
 
 <style scoped>
+    .highlight-navbar {
+        border-bottom: 2px solid #0282F9;
+        color: #0282F9;
+        height: 149.5px;
+    }
+
     header {
         height: 150px;
     }
@@ -78,10 +92,10 @@ export default {
 
     }
 
-    ul li:nth-child(2) {
+    /* ul li:nth-child(2) {
         border-bottom: 2px solid #0282F9;
         color: #0282F9;
-    }
+    } */
 
 
 </style>
