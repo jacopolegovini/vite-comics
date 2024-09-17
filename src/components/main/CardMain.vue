@@ -44,16 +44,18 @@ export default {
 </template>
 
 <style scoped>
+    main {
+        flex-basis: calc((100% / 6) - (100px / 3));
+    }
+    
     .card-img {
         height: 200px;
-        width: 200px;
     }
+
     img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-    }
-    .comic-card {
-        flex-basis: calc(100% / 4)
+        object-position: 0 0;
     }
 </style>

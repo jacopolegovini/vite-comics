@@ -118,5 +118,9 @@ export default {
 
     .comic-cards {
         display: flex;
+        gap: 20px;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 20px 0;
     }
 </style>
